@@ -1,0 +1,26 @@
+name: Build Chip
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Build chip
+        uses: wokwi/wokwi-chip-clang-action@main
+        with:
+          sources: "chips/gc9a01.c"
+      - name: Copy chip.json
+        run: sudo cp gc9a01.json dist
+      - name: 'Upload Artifacts'
+        uses: actions/upload-artifact@v4
+        with:
+          name: chip
+          path: |
+            dist/gc9a01.json
+            dist/gc9a01.wasm
+

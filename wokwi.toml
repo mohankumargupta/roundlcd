@@ -2,3 +2,8 @@
 version = 1
 firmware = '.esphome/build/roundlcd/.pioenvs/roundlcd/firmware.elf'
 elf = '.esphome/build/roundlcd/.pioenvs/roundlcd/firmware.elf'
+
+[[chip]]
+name = 'GC9A01'
+binary = 'dist/gc9a01.wasm'
+
