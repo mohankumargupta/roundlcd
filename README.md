@@ -17,3 +17,7 @@ https://community.home-assistant.io/t/esp32-c3-with-integrated-gc9a01-cheap-touc
 https://hjwwalters.com/gc9a01-display-esp32/
 
 https://www.aliexpress.com/item/1005008298222283.html
+
+ ESP32-2424S012
+
+ 
