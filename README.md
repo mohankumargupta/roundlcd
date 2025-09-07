@@ -22,4 +22,10 @@ https://www.aliexpress.com/item/1005008298222283.html
 
  https://www.espboards.dev/esp32/cyd-esp32-2424s012
 
+ waveshare
+
+ https://www.aliexpress.com/item/1005006211756061.html
+
+ https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-1.28
+
  
