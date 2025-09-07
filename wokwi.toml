@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = '.esphome/build/roundlcd/.pioenvs/roundlcd/firmware.elf'
+elf = '.esphome/build/roundlcd/.pioenvs/roundlcd/firmware.elf'
