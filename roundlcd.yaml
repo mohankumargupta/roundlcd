@@ -6,9 +6,9 @@ esp32:
   framework:
     type: arduino
 
-psram:
-  mode: octal
-  speed: 80MHZ
+# psram:
+#   mode: octal
+#   speed: 80MHZ
 
 logger:
 

@@ -17,7 +17,6 @@
     "ili9xxx",
     "logger",
     "preferences",
-    "psram",
     "spi"
   ],
   "loaded_platforms": [

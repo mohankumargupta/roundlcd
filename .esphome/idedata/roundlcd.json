@@ -14,7 +14,6 @@
     "ARDUINO_RUNNING_CORE=1",
     "ARDUINO_EVENT_RUNNING_CORE=1",
     "ARDUINO_USB_CDC_ON_BOOT=1",
-    "BOARD_HAS_PSRAM",
     "ESPHOME_LOG_LEVEL=ESPHOME_LOG_LEVEL_DEBUG",
     "USE_ARDUINO",
     "USE_ESP32",
@@ -349,7 +348,7 @@
       "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32-libs\\esp32s3\\include\\arduino_tinyusb\\tinyusb\\src",
       "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32-libs\\esp32s3\\include\\arduino_tinyusb\\include",
       "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32-libs\\esp32s3\\include\\fb_gfx\\include",
-      "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32-libs\\esp32s3\\qio_opi\\include",
+      "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32-libs\\esp32s3\\qio_qspi\\include",
       "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32\\cores\\esp32",
       "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32\\variants\\esp32s3"
     ],
