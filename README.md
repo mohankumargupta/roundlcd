@@ -20,4 +20,6 @@ https://www.aliexpress.com/item/1005008298222283.html
 
  ESP32-2424S012
 
+ https://www.espboards.dev/esp32/cyd-esp32-2424s012
+
  
