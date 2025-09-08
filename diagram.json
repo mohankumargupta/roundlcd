@@ -4,13 +4,25 @@
   "editor": "wokwi",
   "parts": [
     {
-      "type": "board-esp32-s3-devkitc-1",
+      "type": "board-aitewinrobot-esp32c3-supermini",
       "id": "esp",
-      "top": 19.02,
-      "left": -101.03,
+      "top": -50.64,
+      "left": -447.13,
       "attrs": {}
     }
   ],
-  "connections": [ [ "esp:TX", "$serialMonitor:RX", "", [] ], [ "esp:RX", "$serialMonitor:TX", "", [] ] ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.10", "chip1:GND", "black", [ "h16.78", "v-115.2", "h403.2", "v67.2" ] ],
+    [ "esp:3V3.1", "chip1:VCC", "red", [ "h-9.6", "v-115.2", "h508.8", "v76.8" ] ],
+    [ "esp:4", "chip1:SDA", "green", [ "h19.2", "v-163.2", "h355.2", "v105.6" ] ],
+    [ "esp:3V3", "chip1:VCC", "red", [ "h28.8", "v-144", "h336", "v86.4" ] ],
+    [ "esp:GND", "chip1:GND", "black", [ "h38.4", "v-124.8", "h316.8", "v67.2" ] ],
+    [ "esp:2", "chip1:SCL", "yellow", [ "h86.4", "v-76.8" ] ],
+    [ "esp:0", "chip1:RST", "magenta", [ "h76.8", "v-105.6" ] ],
+    [ "esp:1", "chip1:DC", "#8f4814", [ "h67.2", "v-105.6" ] ],
+    [ "esp:5", "chip1:CS", "blue", [ "v-48" ] ]
+  ],
   "dependencies": {}
 }

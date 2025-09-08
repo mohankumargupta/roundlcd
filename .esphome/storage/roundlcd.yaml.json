@@ -7,7 +7,7 @@
   "src_version": 1,
   "address": null,
   "web_port": null,
-  "esp_platform": "ESP32S3",
+  "esp_platform": "ESP32C3",
   "build_path": "C:\\Users\\mohan\\Developer\\mohankumargupta\\roundlcd\\.esphome\\build\\roundlcd",
   "firmware_bin_path": "C:\\Users\\mohan\\Developer\\mohankumargupta\\roundlcd\\.esphome\\build\\roundlcd\\.pioenvs\\roundlcd\\firmware.bin",
   "loaded_integrations": [
