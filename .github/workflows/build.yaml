@@ -14,6 +14,7 @@ jobs:
         uses: raspberrypisig/wokwi-chip-clang-action@main
         with:
           sources: "chips/gc9a01.c"
+          output-wasm: "gc9a01"
       - name: Copy chip.json
         run: sudo cp gc9a01.json dist
       - name: 'Upload Artifacts'
@@ -21,6 +22,5 @@ jobs:
         with:
           name: chip
           path: |
-            dist/gc9a01.json
             dist/gc9a01.wasm
 
