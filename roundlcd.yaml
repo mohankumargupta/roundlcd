@@ -28,8 +28,8 @@ esp32:
 
 color:
   - id: my_red
-    red: 100%
-    green: 0%
+    red: 0%
+    green: 100%
     blue: 0%
 
 spi:
@@ -46,7 +46,7 @@ display:
     rotation: 0
     invert_colors: true
     color_depth: 8
-    color_order: rgb
+    color_order: bgr
     #color_palette: 8BIT
     # auto_clear_enabled: false
     #update_interval: never
