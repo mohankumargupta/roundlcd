@@ -28,9 +28,9 @@ esp32:
 
 color:
   - id: my_red
-    red: 0%
-    green: 100%
-    blue: 100%
+    red: 100%
+    green: 0%
+    blue: 0%
 
 spi:
   clk_pin: GPIO14
@@ -44,7 +44,7 @@ display:
     #reset_pin: 0
     cs_pin: GPIO15
     rotation: 0
-    invert_colors: true
+    invert_colors: false
     color_depth: 8
     color_order: bgr
     #color_palette: 8BIT
