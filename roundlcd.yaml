@@ -1,12 +1,8 @@
 esphome:
   name: roundlcd
-  on_boot:
-    then:
-      - delay: 5s
-      - logger.log: "Hello round LCD"
 
 esp32:
-  board: esp32-c3-devkitm-1
+  board: esp32-s3-devkitm-1
   framework:
     type: arduino
 
@@ -14,8 +10,7 @@ esp32:
 #   mode: octal
 #   speed: 80MHZ
 
-logger:
-  level: VERBOSE
+#logger:
 
 # wifi:
 #   ssid: !secret wifi_ssid
@@ -31,22 +26,32 @@ logger:
 # web_server:
 #   port: 80
 
+color:
+  - id: my_red
+    red: 100%
+    green: 0%
+    blue: 0%
+
 spi:
-  clk_pin: GPIO2
-  mosi_pin: GPIO4
+  clk_pin: GPIO14
+  mosi_pin: GPIO13
   
 display: 
-  - platform: ili9xxx
-    model: GC9A01A
+  - platform: mipi_spi
+    model: ILI9341
     id: mylcd
-    dc_pin: GPIO1
-    reset_pin: GPIO0
-    cs_pin: GPIO5
+    dc_pin: GPIO2
+    #reset_pin: 0
+    cs_pin: GPIO15
     rotation: 0
-    invert_colors: false
-    color_palette: 8BIT
-    auto_clear_enabled: true
+    invert_colors: true
+    color_depth: 8
+    color_order: rgb
+    #color_palette: 8BIT
+    # auto_clear_enabled: false
+    #update_interval: never
+    #show_test_card: true
     lambda: |-
-      it.filled_circle(20, 75, 10, Color(255,0,0,255));
+      it.filled_circle(it.get_width()/2, it.get_height()/2, 30, id(my_red));
 
   
