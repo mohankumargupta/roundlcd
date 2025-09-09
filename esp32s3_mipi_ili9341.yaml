@@ -1,0 +1,57 @@
+esphome:
+  name: roundlcd
+
+esp32:
+  board: esp32-s3-devkitm-1
+  framework:
+    type: arduino
+
+# psram:
+#   mode: octal
+#   speed: 80MHZ
+
+#logger:
+
+# wifi:
+#   ssid: !secret wifi_ssid
+#   password: !secret wifi_password
+
+# captive_portal:
+
+#api:
+
+# ota:
+#   - platform: esphome
+
+# web_server:
+#   port: 80
+
+color:
+  - id: my_red
+    red: 100%
+    green: 0%
+    blue: 0%
+
+spi:
+  clk_pin: GPIO14
+  mosi_pin: GPIO13
+  
+display: 
+  - platform: mipi_spi
+    model: ILI9341
+    id: mylcd
+    dc_pin: GPIO2
+    #reset_pin: 0
+    cs_pin: GPIO15
+    rotation: 0
+    invert_colors: false
+    color_depth: 8
+    color_order: bgr
+    #color_palette: 8BIT
+    # auto_clear_enabled: false
+    #update_interval: never
+    #show_test_card: true
+    lambda: |-
+      it.filled_circle(it.get_width()/2, it.get_height()/2, 30, id(my_red));
+
+  
