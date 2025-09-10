@@ -32,6 +32,16 @@ color:
     green: 0%
     blue: 0%
 
+# png must be RGB565
+image:
+  defaults:
+    type: rgb565
+    transparency: opaque
+    resize: 100x100
+  images:
+    - file: "weather.png"
+      id: weather
+
 spi:
   clk_pin: GPIO14
   mosi_pin: GPIO13
@@ -57,5 +67,9 @@ lvgl:
   buffer_size: 25%
   widgets:
   - label:
-      align: CENTER
+      y: -50
+      align: BOTTOM_MID
       text: 'Hello World!'  
+  - image:
+      src: weather
+      align: CENTER
