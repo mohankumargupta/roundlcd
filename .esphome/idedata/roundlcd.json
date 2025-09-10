@@ -13,6 +13,8 @@
     "ARDUINO_USB_MODE=1",
     "ARDUINO_RUNNING_CORE=1",
     "ARDUINO_EVENT_RUNNING_CORE=1",
+    "LV_CONF_H=1",
+    "LV_CONF_PATH=lv_conf.h",
     "USE_ARDUINO",
     "USE_ESP32",
     "USE_ESP32_FRAMEWORK_ARDUINO",
@@ -53,8 +55,10 @@
   ],
   "includes": {
     "build": [
-      "C:\\Users\\mohan\\Developer\\mohankumargupta\\roundlcd\\.esphome\\build\\roundlcd\\src",
+      "C:\\Users\\mohan\\Developer\\mohankumargupta\\roundlcd\\.esphome\\build\\roundlcd\\.piolibdeps\\roundlcd\\lvgl",
+      "C:\\Users\\mohan\\Developer\\mohankumargupta\\roundlcd\\.esphome\\build\\roundlcd\\.piolibdeps\\roundlcd\\lvgl\\src",
       "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32\\libraries\\SPI\\src",
+      "C:\\Users\\mohan\\Developer\\mohankumargupta\\roundlcd\\.esphome\\build\\roundlcd\\src",
       "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32-libs\\esp32s3\\include\\newlib\\platform_include",
       "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32-libs\\esp32s3\\include\\freertos\\config\\include",
       "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32-libs\\esp32s3\\include\\freertos\\config\\include\\freertos",
@@ -351,6 +355,9 @@
       "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32\\variants\\esp32s3"
     ],
     "compatlib": [
+      "C:\\Users\\mohan\\Developer\\mohankumargupta\\roundlcd\\.esphome\\build\\roundlcd\\.piolibdeps\\roundlcd\\lvgl",
+      "C:\\Users\\mohan\\Developer\\mohankumargupta\\roundlcd\\.esphome\\build\\roundlcd\\.piolibdeps\\roundlcd\\lvgl\\src",
+      "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32\\libraries\\SPI\\src",
       "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32\\libraries\\SPI\\src",
       "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32\\libraries\\ArduinoOTA\\src",
       "C:\\Users\\mohan\\.platformio\\packages\\framework-arduinoespressif32\\libraries\\AsyncUDP\\src",

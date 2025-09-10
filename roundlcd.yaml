@@ -43,15 +43,19 @@ display:
     dc_pin: GPIO2
     #reset_pin: 0
     cs_pin: GPIO15
-    rotation: 0
-    invert_colors: false
-    color_depth: 8
-    color_order: bgr
-    #color_palette: 8BIT
-    # auto_clear_enabled: false
-    #update_interval: never
-    #show_test_card: true
-    lambda: |-
-      it.filled_circle(it.get_width()/2, it.get_height()/2, 30, id(my_red));
+    dimensions:
+      width: 320
+      height: 240
+    transform:
+      swap_xy: true
+      mirror_x: false
+      mirror_y: false
 
-  
+lvgl:
+  bg_color: black
+  text_color: white
+  buffer_size: 25%
+  widgets:
+  - label:
+      align: CENTER
+      text: 'Hello World!'  
