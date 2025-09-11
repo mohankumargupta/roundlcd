@@ -20,7 +20,8 @@
     "lvgl",
     "mipi_spi",
     "preferences",
-    "spi"
+    "spi",
+    "substitutions"
   ],
   "loaded_platforms": [
     "display/mipi_spi"

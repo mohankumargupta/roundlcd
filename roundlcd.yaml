@@ -6,6 +6,10 @@ esp32:
   framework:
     type: arduino
 
+substitutions:
+  tft_width: 320
+  tft_height: 240
+
 # psram:
 #   mode: octal
 #   speed: 80MHZ
@@ -36,7 +40,7 @@ color:
 image:
   defaults:
     type: rgb565
-    transparency: opaque
+    #transparency: opaque
     resize: 100x100
   images:
     - file: "weather.png"
@@ -54,8 +58,8 @@ display:
     #reset_pin: 0
     cs_pin: GPIO15
     dimensions:
-      width: 320
-      height: 240
+      width: ${tft_width}
+      height: ${tft_height}
     transform:
       swap_xy: true
       mirror_x: false
@@ -65,11 +69,38 @@ lvgl:
   bg_color: black
   text_color: white
   buffer_size: 25%
+  theme:
+    label:
+      text_color: white
   widgets:
-  - label:
-      y: -50
-      align: BOTTOM_MID
-      text: 'Hello World!'  
-  - image:
-      src: weather
-      align: CENTER
+  - obj:
+      #align: CENTER
+      width: ${tft_width}
+      height: ${tft_height}
+      bg_opa: TRANSP
+      border_width: 0
+      layout:
+        type: GRID
+        grid_columns: [FR(1), FR(1),FR(1)]
+        grid_rows: [FR(10),FR(60),FR(20),FR(10)]
+        #grid_column_align: STRETCH
+      widgets:        
+        - label:
+            text: 'Melbourne'
+            text_align: CENTER
+            grid_cell_column_pos: 0
+            grid_cell_row_pos: 0
+        - image:
+            src: weather
+            grid_cell_column_pos: 0
+            grid_cell_row_pos: 1
+        - label:
+            text: '21C'
+            text_font: montserrat_40
+            text_align: CENTER
+            grid_cell_column_pos: 0 
+            grid_cell_row_pos: 2
+        - label:
+            text: 'Updated 10:47'
+            grid_cell_column_pos: 0
+            grid_cell_row_pos: 3
